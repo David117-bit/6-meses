@@ -1269,6 +1269,24 @@ document.addEventListener('DOMContentLoaded', () => {
   // Para navegadores que bloquean autoplay, se activa al hacer clic en cualquier parte
   document.addEventListener('click', playAudio);
 });
+
+// Acción para el botón "¡Sí, por siempre!"
+document.querySelectorAll('.modal-content button').forEach(btn => {
+    if (btn.textContent.includes('Sí, por siempre')) {
+        btn.addEventListener('click', () => {
+            confetti({
+                particleCount: 200,
+                spread: 100,
+                origin: { y: 0.6 },
+                colors: ['#ff2d75', '#ffd700', '#ff8fab', '#c9184a']
+            });
+
+            setTimeout(() => {
+                alert('Gracias mi amor, gracias por amarme muchoo, no sabes lo feliz que soy contigo , eres lo mas bonito que hubo,que hay y que habra y  no sabes la suerte que tengo de tenerte 💖🥺');
+            }, 300);
+        });
+    }
+});        
 </script>
 
 </body>
